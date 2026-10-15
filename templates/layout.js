@@ -6,7 +6,7 @@ import { services } from '../content/services.js';
 import { solutions } from '../content/solutions.js';
 import { industries } from '../content/industries.js';
 import { placeholder } from './components.js';
-import { paths, asset } from './paths.js';
+import { paths, asset, withBase } from './paths.js';
 
 // `path` ya incluye la subcarpeta (/analitixiq/...), así que se resuelve contra el origen de site.url
 const absolute = (path) => new URL(path, site.url).href;
@@ -32,7 +32,7 @@ function head({ title, description, path, jsonLd = [], noindex = false }) {
     <meta property="og:title" content="${fullTitle}" />
     <meta property="og:description" content="${description}" />
     <meta property="og:url" content="${url}" />
-    <meta property="og:image" content="${absolute(asset('brand/logo-full.png'))}" />
+    <meta property="og:image" content="${absolute(withBase('brand/logo-full.png'))}" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/png" sizes="32x32" href="${asset('brand/favicon-32.png')}" />
     <link rel="apple-touch-icon" href="${asset('brand/apple-touch-icon.png')}" />
@@ -317,7 +317,7 @@ export const organizationJsonLd = () => ({
   slogan: site.tagline,
   description: site.description,
   url: absolute(paths.home),
-  logo: absolute(asset('brand/icon-512.png')),
+  logo: absolute(withBase('brand/icon-512.png')),
   knowsAbout: site.capabilities,
   ...(site.contact.email ? { email: site.contact.email } : {}),
 });

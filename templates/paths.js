@@ -10,7 +10,12 @@ export const withBase = (route = '') => base + route.replace(/^\//, '');
 /** Convierte una ruta pública en la ruta relativa a la raíz del sitio generado ('/analitixiq/servicios/' → 'servicios/'). */
 export const stripBase = (path) => (path.startsWith(base) ? path.slice(base.length) : path.replace(/^\//, ''));
 
-export const asset = (file) => withBase(file);
+/**
+ * Archivo de /site/public referenciado en atributos que Vite procesa (img src, link href).
+ * Vite antepone la subcarpeta por su cuenta, en dev y en build; anteponerla aquí la duplicaría.
+ * Para URLs absolutas (og:image, JSON-LD) use withBase().
+ */
+export const asset = (file) => `/${file.replace(/^\//, '')}`;
 
 export const paths = {
   home: withBase(),
