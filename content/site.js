@@ -115,8 +115,8 @@ export const site = {
 
   contact: {
     email: 'mauricio_smith@hotmail.com',
-    phone: '301 787 6561',
-    phoneHref: 'tel:+573017876561',
+    phone: '305 314 1340',
+    phoneHref: 'tel:+573053141340',
     location: 'Medellín, Colombia',
     linkedin: null, // PLACEHOLDER: URL de LinkedIn
   },
