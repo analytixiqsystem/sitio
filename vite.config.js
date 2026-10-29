@@ -45,7 +45,7 @@ function staticPages() {
 
 export default defineConfig({
   root,
-  // Subcarpeta de GitHub Pages (/analitixiq/); el servidor local usa la misma para que dev y producción coincidan
+  // Subcarpeta de GitHub Pages (/sitio/); el servidor local usa la misma para que dev y producción coincidan
   base: site.basePath,
   appType: 'mpa',
   plugins: [staticPages(), tailwindcss()],

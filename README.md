@@ -6,19 +6,19 @@ Sitio corporativo estático de **AnalytixIQ Systems** (_Datos que inspiran, info
 
 ```bash
 npm install
-npm run dev       # servidor local con recarga → http://127.0.0.1:5173/analitixiq/
+npm run dev       # servidor local con recarga → http://127.0.0.1:5173/sitio/
 npm run build     # sitio listo para publicar en /dist
-npm run preview   # sirve /dist localmente (también bajo /analitixiq/)
+npm run preview   # sirve /dist localmente (también bajo /sitio/)
 ```
 
 ## Publicación en GitHub Pages
 
-El sitio se publica en `https://<usuario>.github.io/analitixiq/`. La subcarpeta `/analitixiq/` está definida en `content/site.js` (`basePath`) y **debe coincidir con el nombre del repositorio**.
+El sitio se publica en `https://<usuario>.github.io/sitio/`. La subcarpeta `/sitio/` está definida en `content/site.js` (`basePath`) y **debe coincidir con el nombre del repositorio**.
 
-1. Crear en GitHub un repositorio llamado `analitixiq` (vacío, sin README).
+1. Crear en GitHub un repositorio llamado `sitio` (vacío, sin README).
 2. Subir el código:
    ```bash
-   git remote add origin https://github.com/<usuario>/analitixiq.git
+   git remote add origin https://github.com/<usuario>/sitio.git
    git push -u origin main
    ```
 3. En el repositorio: **Settings → Pages → Build and deployment → Source: GitHub Actions**.

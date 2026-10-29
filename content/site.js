@@ -7,11 +7,11 @@ export const site = {
   shortName: 'AnalytixIQ',
   tagline: 'Datos que inspiran, información que transforma.',
   positioning: 'Data, AI & Enterprise Architecture Consulting',
-  // Subcarpeta donde se publica el sitio (GitHub Pages de proyecto: https://<usuario>.github.io/analitixiq/).
+  // Subcarpeta donde se publica el sitio (GitHub Pages de proyecto: https://analytixiqsystem.github.io/sitio/).
   // Debe coincidir con el nombre del repositorio. Use BASE_PATH=/ si algún día se publica en un dominio propio.
-  basePath: process.env.BASE_PATH || '/analitixiq/',
+  basePath: process.env.BASE_PATH || '/sitio/',
   // URL pública completa del sitio (incluye la subcarpeta). En GitHub Actions la define el flujo de despliegue.
-  url: process.env.SITE_URL || 'https://www.example.com/analitixiq/',
+  url: process.env.SITE_URL || 'https://analytixiqsystem.github.io/sitio/',
   lang: 'es',
   description:
     'Consultoría especializada en arquitectura empresarial, datos, analítica, inteligencia artificial y transformación digital. Transformamos datos en decisiones y tecnología en capacidades de negocio.',

@@ -8,7 +8,7 @@ import { industries } from '../content/industries.js';
 import { placeholder } from './components.js';
 import { paths, asset, withBase } from './paths.js';
 
-// `path` ya incluye la subcarpeta (/analitixiq/...), así que se resuelve contra el origen de site.url
+// `path` ya incluye la subcarpeta (/sitio/...), así que se resuelve contra el origen de site.url
 const absolute = (path) => new URL(path, site.url).href;
 
 // Script en línea: activa animaciones solo si el usuario no pidió movimiento reducido,

@@ -32,7 +32,7 @@ const pages = [
   { file: '404.html', render: notFoundPage, sitemap: false },
 ];
 
-// Las rutas públicas incluyen la subcarpeta (/analitixiq/...); en disco se escriben desde la raíz de /site
+// Las rutas públicas incluyen la subcarpeta (/sitio/...); en disco se escriben desde la raíz de /site
 const fileFor = (page) => page.file || join(stripBase(page.path), 'index.html');
 
 // Elimina las páginas generadas en la ejecución anterior (por si se renombró un slug)

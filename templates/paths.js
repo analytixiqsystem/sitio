@@ -1,13 +1,13 @@
 // Rutas públicas del sitio (todas con barra final: cada página es /ruta/index.html).
-// Todas incluyen la subcarpeta de publicación (site.basePath), p. ej. /analitixiq/servicios/.
+// Todas incluyen la subcarpeta de publicación (site.basePath), p. ej. /sitio/servicios/.
 import { site } from '../content/site.js';
 
 const base = site.basePath.endsWith('/') ? site.basePath : `${site.basePath}/`;
 
-/** Antepone la subcarpeta de publicación a una ruta interna ('servicios/' → '/analitixiq/servicios/'). */
+/** Antepone la subcarpeta de publicación a una ruta interna ('servicios/' → '/sitio/servicios/'). */
 export const withBase = (route = '') => base + route.replace(/^\//, '');
 
-/** Convierte una ruta pública en la ruta relativa a la raíz del sitio generado ('/analitixiq/servicios/' → 'servicios/'). */
+/** Convierte una ruta pública en la ruta relativa a la raíz del sitio generado ('/sitio/servicios/' → 'servicios/'). */
 export const stripBase = (path) => (path.startsWith(base) ? path.slice(base.length) : path.replace(/^\//, ''));
 
 /**
